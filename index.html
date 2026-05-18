@@ -3,797 +3,781 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5월 24-25일</title>
+<title>우리의 데이트 플랜 🌸</title>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --cream: #fdf6ee;
-  --blush: #f2c4ce;
-  --rose: #d4687a;
-  --wine: #8b2e45;
-  --sage: #7a9e7e;
-  --dusty: #c2a87d;
-  --ink: #2d2016;
-  --soft: #f9efe8;
-  --road: #4a4a5a;
-  --road-line: #f5e642;
-}
+:root{--cream:#fdf6ee;--blush:#f2c4ce;--rose:#d4687a;--wine:#8b2e45;--sage:#7a9e7e;--dusty:#c2a87d;--ink:#2d2016;--soft:#f9efe8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);font-family:'Gowun Dodum',sans-serif;color:var(--ink);overflow-x:hidden;}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--cream); font-family: 'Gowun Dodum', sans-serif; color: var(--ink); overflow-x: hidden; }
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;
+  background:radial-gradient(ellipse at 20% 30%,#f7dde580,transparent 55%),radial-gradient(ellipse at 80% 70%,#d4e8d480,transparent 55%),var(--cream);}
+.hero-badge{font-family:'Caveat',cursive;font-size:1.1rem;color:var(--rose);background:white;border:1.5px solid var(--blush);padding:.4rem 1.2rem;border-radius:50px;margin-bottom:1.5rem;display:inline-block;box-shadow:0 2px 12px #f2c4ce60;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.hero h1{font-family:'Nanum Myeongjo',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:800;color:var(--wine);margin-bottom:1rem;line-height:1.25;}
+.hero h1 span{color:var(--rose);font-family:'Caveat',cursive;font-size:1.1em;}
+.hero-sub{color:#8a6e5c;margin-bottom:2.5rem;font-size:.97rem;}
+.plan-nav{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
+.plan-nav a{text-decoration:none;padding:.7rem 2rem;border-radius:50px;font-weight:700;font-size:.95rem;transition:all .3s;color:white;}
+.plan-nav a.a{background:var(--wine)}.plan-nav a.b{background:var(--sage)}.plan-nav a.c{background:var(--dusty)}
+.plan-nav a:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.15);}
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; padding: 3rem 2rem;
-  background: radial-gradient(ellipse at 20% 30%, #f7dde580 0%, transparent 55%),
-              radial-gradient(ellipse at 80% 70%, #d4e8d480 0%, transparent 55%), var(--cream);
-}
-.hero-badge {
-  font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--rose);
-  background: white; border: 1.5px solid var(--blush); padding: 0.4rem 1.2rem;
-  border-radius: 50px; margin-bottom: 1.5rem; display: inline-block;
-  box-shadow: 0 2px 12px #f2c4ce60; animation: float 3s ease-in-out infinite;
-}
-@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+.plan-section{padding:4rem 0 2rem;}.anchor{scroll-margin-top:30px;}
+.section-intro{text-align:center;padding:0 2rem 2.5rem;}
+.plan-tag{display:inline-block;font-family:'Caveat',cursive;font-size:1rem;padding:.3rem 1rem;border-radius:4px;margin-bottom:.8rem;}
+.tag-a{background:#f7e0e4;color:var(--wine)}.tag-b{background:#daeada;color:#3a6b3e}.tag-c{background:#f3e8d4;color:#7a5c2e}
+.section-intro h2{font-family:'Nanum Myeongjo',serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;color:var(--wine);}
+.section-intro p{color:#7a6055;margin-top:.5rem;font-size:.95rem;}
 
-.hero h1 {
-  font-family: 'Nanum Myeongjo', serif; font-size: clamp(2.2rem,6vw,4rem);
-  font-weight: 800; color: var(--wine); margin-bottom: 1rem; line-height: 1.25;
-}
-.hero h1 span { color: var(--rose); font-family: 'Caveat', cursive; font-size: 1.1em; }
-.hero-sub { color: #8a6e5c; margin-bottom: 2.5rem; font-size: 0.97rem; }
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:800px;margin:0 auto 2.5rem;padding:0 1.5rem;}
+@media(max-width:520px){.pros-cons{grid-template-columns:1fr;}}
+.pros-box,.cons-box{background:white;border-radius:16px;padding:1.2rem 1.4rem;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.pros-box{border-top:3px solid var(--sage)}.cons-box{border-top:3px solid var(--blush)}
+.pros-box h4,.cons-box h4{font-family:'Nanum Myeongjo',serif;font-size:1rem;margin-bottom:.7rem;}
+.pros-box h4{color:var(--sage)}.cons-box h4{color:var(--rose)}
+.pros-box ul,.cons-box ul{list-style:none;}
+.pros-box li,.cons-box li{font-size:.86rem;color:#5a4a42;line-height:1.8;}
+.pros-box li::before{content:'✓ ';color:var(--sage);font-weight:bold;}
+.cons-box li::before{content:'· ';color:var(--rose);font-weight:bold;}
 
-.plan-nav { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-.plan-nav a {
-  text-decoration: none; padding: 0.7rem 2rem; border-radius: 50px;
-  font-weight: 700; font-size: 0.95rem; transition: all 0.3s; color: white;
-}
-.plan-nav a.a { background: var(--wine); }
-.plan-nav a.b { background: var(--sage); }
-.plan-nav a.c { background: var(--dusty); }
-.plan-nav a:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.info-banner{background:linear-gradient(135deg,#fff5f8,#f0f8f0);border:1px solid var(--blush);border-radius:16px;padding:1rem 1.5rem;max-width:760px;margin:0 auto 2rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-around;text-align:center;}
+.info-item .val{font-family:'Caveat',cursive;font-size:1.3rem;color:var(--wine);display:block;}
+.info-item .label{font-size:.78rem;color:#9a7a6a;}
 
-/* SECTION */
-.plan-section { padding: 4rem 0 2rem; }
-.anchor { scroll-margin-top: 30px; }
-.section-intro { text-align: center; padding: 0 2rem 2.5rem; }
-.plan-tag {
-  display: inline-block; font-family: 'Caveat', cursive; font-size: 1rem;
-  padding: 0.3rem 1rem; border-radius: 4px; margin-bottom: 0.8rem;
-}
-.tag-a { background: #f7e0e4; color: var(--wine); }
-.tag-b { background: #daeada; color: #3a6b3e; }
-.tag-c { background: #f3e8d4; color: #7a5c2e; }
-.section-intro h2 { font-family: 'Nanum Myeongjo', serif; font-size: clamp(1.6rem,4vw,2.6rem); font-weight: 800; color: var(--wine); }
-.section-intro p { color: #7a6055; margin-top: 0.5rem; font-size: 0.95rem; }
+.day-header{font-family:'Nanum Myeongjo',serif;color:var(--wine);max-width:660px;margin:2rem auto 1.2rem;display:flex;align-items:center;gap:.6rem;padding:0 1.5rem;}
+.day-header.green{color:var(--sage);}
+.day-badge{font-family:'Caveat',cursive;font-size:.85rem;background:var(--wine);color:white;padding:.15rem .7rem;border-radius:4px;}
+.day-badge.green{background:var(--sage);}
 
-/* PROS CONS */
-.pros-cons {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-  max-width: 800px; margin: 0 auto 2.5rem; padding: 0 1.5rem;
-}
-@media(max-width:520px){ .pros-cons{grid-template-columns:1fr;} }
-.pros-box, .cons-box {
-  background: white; border-radius: 16px; padding: 1.2rem 1.4rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-}
-.pros-box { border-top: 3px solid var(--sage); }
-.cons-box { border-top: 3px solid var(--blush); }
-.pros-box h4, .cons-box h4 { font-family: 'Nanum Myeongjo', serif; font-size: 1rem; margin-bottom: 0.7rem; }
-.pros-box h4 { color: var(--sage); } .cons-box h4 { color: var(--rose); }
-.pros-box ul, .cons-box ul { list-style: none; }
-.pros-box li, .cons-box li { font-size: 0.86rem; color: #5a4a42; line-height: 1.8; }
-.pros-box li::before { content: '✓ '; color: var(--sage); font-weight: bold; }
-.cons-box li::before { content: '· '; color: var(--rose); font-weight: bold; }
+.route-col{max-width:660px;margin:0 auto;padding:0 1.5rem;display:flex;flex-direction:column;align-items:stretch;}
 
-/* INFO BANNER */
-.info-banner {
-  background: linear-gradient(135deg,#fff5f8,#f0f8f0); border: 1px solid var(--blush);
-  border-radius: 16px; padding: 1rem 1.5rem; max-width: 760px; margin: 0 auto 2rem;
-  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-around; text-align: center;
-}
-.info-item .val { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--wine); display: block; }
-.info-item .label { font-size: 0.78rem; color: #9a7a6a; }
+.stop-card{background:white;border-radius:18px;padding:1.3rem 1.5rem;box-shadow:0 3px 18px rgba(180,100,80,.08);border:1px solid #f2e8e0;transition:transform .25s,box-shadow .25s;}
+.stop-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(180,100,80,.14);}
+.stop-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem;margin-bottom:.5rem;flex-wrap:wrap;}
+.stop-name{font-family:'Nanum Myeongjo',serif;font-weight:700;font-size:1.05rem;color:var(--ink);flex:1;}
+.stop-time{font-family:'Caveat',cursive;font-size:.88rem;background:var(--soft);color:var(--rose);padding:.2rem .8rem;border-radius:20px;border:1px solid var(--blush);white-space:nowrap;}
+.stop-desc{font-size:.86rem;color:#7a6055;line-height:1.65;margin-bottom:.9rem;}
+.stop-links{display:flex;flex-wrap:wrap;gap:.4rem;}
+.link-pill{display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;padding:.25rem .8rem;border-radius:20px;border:1.5px solid var(--rose);color:var(--rose);text-decoration:none;cursor:pointer;background:white;transition:all .2s;font-family:'Gowun Dodum',sans-serif;}
+.link-pill:hover{background:var(--rose);color:white;}
+.link-pill.sage{border-color:var(--sage);color:var(--sage);}
+.link-pill.sage:hover{background:var(--sage);color:white;}
+.link-pill.blue{border-color:#3f51b5;color:#3f51b5;}
+.link-pill.blue:hover{background:#3f51b5;color:white;}
+.link-pill.add{border-style:dashed;border-color:#cbb8ae;color:#aaa090;}
+.link-pill.add:hover{border-color:var(--rose);color:var(--rose);background:white;}
+.link-pill.existing{border-color:var(--rose);color:var(--rose);}
 
-/* DAY HEADER */
-.day-header {
-  font-family: 'Nanum Myeongjo', serif; color: var(--wine);
-  max-width: 660px; margin: 2rem auto 1.2rem;
-  display: flex; align-items: center; gap: 0.6rem; padding: 0 1.5rem;
-}
-.day-header.green { color: var(--sage); }
-.day-badge {
-  font-family: 'Caveat', cursive; font-size: 0.85rem; background: var(--wine);
-  color: white; padding: 0.15rem 0.7rem; border-radius: 4px;
-}
-.day-badge.green { background: var(--sage); }
+/* 미정 뱃지 */
+.tbd-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.76rem;padding:.2rem .7rem;border-radius:20px;background:#f9f3ec;border:1px dashed var(--dusty);color:#a08060;font-family:'Gowun Dodum',sans-serif;}
 
-/* ROUTE COLUMN */
-.route-col {
-  max-width: 660px; margin: 0 auto; padding: 0 1.5rem;
-  display: flex; flex-direction: column; align-items: center;
-}
+/* 맛집 추천 박스 */
+.alt-box{background:#fdf8f4;border:1px solid #f0e0d0;border-radius:12px;padding:.8rem 1rem;margin-top:.7rem;font-size:.82rem;color:#7a5a42;}
+.alt-box strong{color:var(--wine);display:block;margin-bottom:.3rem;font-size:.85rem;}
+.alt-box a{color:var(--rose);text-decoration:none;}
+.alt-box a:hover{text-decoration:underline;}
 
-/* STOP CARD */
-.stop-card {
-  width: 100%; background: white; border-radius: 18px;
-  padding: 1.3rem 1.5rem; box-shadow: 0 3px 18px rgba(180,100,80,0.08);
-  border: 1px solid #f2e8e0; transition: transform 0.25s, box-shadow 0.25s;
-}
-.stop-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(180,100,80,0.14); }
-.stop-top {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 0.8rem; margin-bottom: 0.5rem; flex-wrap: wrap;
-}
-.stop-name { font-family: 'Nanum Myeongjo', serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); flex: 1; }
-.stop-time {
-  font-family: 'Caveat', cursive; font-size: 0.88rem; background: var(--soft);
-  color: var(--rose); padding: 0.2rem 0.8rem; border-radius: 20px;
-  border: 1px solid var(--blush); white-space: nowrap;
-}
-.stop-desc { font-size: 0.86rem; color: #7a6055; line-height: 1.65; margin-bottom: 0.9rem; }
-.stop-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+/* TRANSIT */
+.transit-block{margin:8px 0;display:flex;flex-direction:column;align-items:center;}
+.transit-btn{display:flex;align-items:center;gap:.6rem;background:white;border:1.5px solid var(--blush);border-radius:30px;padding:.45rem 1.2rem;cursor:pointer;font-family:'Gowun Dodum',sans-serif;font-size:.82rem;color:#7a5a52;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,.05);width:fit-content;}
+.transit-btn:hover{border-color:var(--rose);color:var(--rose);box-shadow:0 4px 14px rgba(212,104,122,.2);}
+.transit-btn .arrow{font-size:.7rem;margin-left:.2rem;transition:transform .3s;}
+.transit-btn.open .arrow{transform:rotate(180deg);}
+.transit-btn strong{color:var(--wine);}
 
-/* link pills */
-.link-pill {
-  display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.78rem;
-  padding: 0.25rem 0.8rem; border-radius: 20px; border: 1.5px solid var(--rose);
-  color: var(--rose); text-decoration: none; cursor: pointer;
-  background: white; transition: all 0.2s; font-family: 'Gowun Dodum', sans-serif;
-}
-.link-pill:hover { background: var(--rose); color: white; }
-.link-pill.sage { border-color: var(--sage); color: var(--sage); }
-.link-pill.sage:hover { background: var(--sage); color: white; }
-.link-pill.add { border-style: dashed; border-color: #cbb8ae; color: #aaa090; }
-.link-pill.add:hover { border-color: var(--rose); color: var(--rose); background: white; }
-.link-pill.existing { border-color: var(--rose); color: var(--rose); }
+.map-panel{width:100%;max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1),opacity .4s;opacity:0;}
+.map-panel.open{max-height:340px;opacity:1;}
+.map-inner{background:#e8f4f8;border:1.5px solid var(--blush);border-radius:16px;margin-top:8px;padding:12px;}
+.route-svg{width:100%;height:200px;display:block;}
+.map-info-bar{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:8px;flex-wrap:wrap;}
+.map-chip{background:white;border:1px solid var(--blush);border-radius:20px;padding:.2rem .8rem;font-size:.78rem;color:#7a5a52;display:flex;align-items:center;gap:.3rem;}
+.map-chip strong{color:var(--wine);}
 
-/* ══════════════════════════
-   ROAD ANIMATION SEGMENT
-══════════════════════════ */
-.road-segment {
-  width: 100%;
-  display: flex; flex-direction: column; align-items: center;
-  padding: 4px 0; position: relative;
-}
+.wavy-divider{text-align:center;padding:2rem;color:var(--blush);font-size:1.4rem;letter-spacing:.5rem;}
 
-/* the road strip — vertical (car drives downward on page = upward motion) */
-.road-strip {
-  width: 100px; height: 96px;
-  background: #3e3e4e;
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.1);
-}
+footer{text-align:center;padding:3rem 2rem 4rem;font-family:'Caveat',cursive;font-size:1.3rem;color:var(--rose);line-height:2;background:linear-gradient(to bottom,var(--cream),#fbe8e0);}
+footer small{display:block;font-family:'Gowun Dodum',sans-serif;font-size:.78rem;color:#bba090;margin-top:.4rem;}
 
-/* side grass strips */
-.road-strip::after {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(to right, #6abf6a 0%, #6abf6a 14px, transparent 14px),
-    linear-gradient(to left,  #6abf6a 0%, #6abf6a 14px, transparent 14px);
-  pointer-events: none;
-}
+/* PLAN C coming soon */
+.coming-soon{text-align:center;padding:3rem 2rem;color:#bba090;font-family:'Caveat',cursive;font-size:1.5rem;}
 
-/* animated center dashes — move downward to simulate car moving forward */
-.road-dashes {
-  position: absolute;
-  left: 50%; transform: translateX(-50%);
-  width: 6px; top: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--road-line) 0px, var(--road-line) 14px,
-    transparent 14px, transparent 28px
-  );
-  animation: dashMove 0.55s linear infinite;
-}
-@keyframes dashMove {
-  from { background-position-y: 0; }
-  to   { background-position-y: 28px; }
-}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(45,32,22,.5);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.modal-overlay.open{display:flex;}
+.modal{background:white;border-radius:24px;padding:2rem;width:min(92vw,420px);box-shadow:0 20px 60px rgba(0,0,0,.2);animation:popIn .25s ease;}
+@keyframes popIn{from{transform:scale(.88) translateY(12px);opacity:0}to{transform:scale(1);opacity:1}}
+.modal h3{font-family:'Nanum Myeongjo',serif;font-size:1.2rem;color:var(--wine);margin-bottom:.3rem;}
+.modal p{font-size:.83rem;color:#9a7a6a;margin-bottom:1.4rem;}
+.modal label{display:block;font-size:.82rem;color:var(--ink);margin-bottom:.3rem;font-weight:600;}
+.modal input{width:100%;padding:.65rem .9rem;border:1.5px solid #e8d8d0;border-radius:10px;font-family:'Gowun Dodum',sans-serif;font-size:.9rem;outline:none;margin-bottom:1rem;transition:border-color .2s;color:var(--ink);}
+.modal input:focus{border-color:var(--rose);}
+.modal-btns{display:flex;gap:.7rem;justify-content:flex-end;margin-top:.5rem;}
+.btn-cancel{padding:.55rem 1.3rem;border-radius:20px;border:1.5px solid #e0d0c8;background:white;color:#9a7a6a;cursor:pointer;font-family:'Gowun Dodum',sans-serif;font-size:.88rem;transition:all .2s;}
+.btn-cancel:hover{border-color:var(--rose);color:var(--rose);}
+.btn-save{padding:.55rem 1.5rem;border-radius:20px;border:none;background:var(--wine);color:white;cursor:pointer;font-family:'Gowun Dodum',sans-serif;font-size:.88rem;font-weight:700;transition:all .2s;}
+.btn-save:hover{background:var(--rose);transform:translateY(-1px);}
+.btn-delete{padding:.55rem 1rem;border-radius:20px;border:1.5px solid #e0d0c8;background:white;color:#c07070;cursor:pointer;margin-right:auto;font-family:'Gowun Dodum',sans-serif;font-size:.82rem;transition:all .2s;}
+.btn-delete:hover{background:#fff0f0;border-color:#c07070;}
 
-/* car SVG */
-.car-wrap {
-  position: absolute;
-  bottom: 8px; left: 50%; transform: translateX(-50%);
-  z-index: 5;
-  animation: carBounce 0.4s ease-in-out infinite alternate;
-}
-@keyframes carBounce {
-  from { transform: translateX(-50%) translateY(0px); }
-  to   { transform: translateX(-50%) translateY(-2.5px); }
-}
-
-/* travel info label below road */
-.travel-info {
-  margin-top: 6px;
-  background: white; border: 1.5px solid var(--blush); border-radius: 20px;
-  padding: 0.28rem 1.1rem; font-size: 0.82rem; color: #7a5a52;
-  display: flex; align-items: center; gap: 0.4rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05); white-space: nowrap; flex-wrap: wrap;
-}
-.travel-info strong { color: var(--wine); }
-
-/* DIVIDER */
-.wavy-divider { text-align: center; padding: 2rem; color: var(--blush); font-size: 1.4rem; letter-spacing: 0.5rem; }
-
-/* FOOTER */
-footer {
-  text-align: center; padding: 3rem 2rem 4rem;
-  font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--rose); line-height: 2;
-  background: linear-gradient(to bottom, var(--cream), #fbe8e0);
-}
-footer small { display: block; font-family: 'Gowun Dodum', sans-serif; font-size: 0.78rem; color: #bba090; margin-top: 0.4rem; }
-
-/* ══════════════════
-   MODAL
-══════════════════ */
-.modal-overlay {
-  display: none; position: fixed; inset: 0;
-  background: rgba(45,32,22,0.5); z-index: 1000;
-  align-items: center; justify-content: center;
-  backdrop-filter: blur(4px);
-}
-.modal-overlay.open { display: flex; }
-.modal {
-  background: white; border-radius: 24px; padding: 2rem; width: min(92vw,420px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2); animation: popIn 0.25s ease;
-}
-@keyframes popIn { from{transform:scale(0.88) translateY(12px);opacity:0} to{transform:scale(1);opacity:1} }
-.modal h3 { font-family: 'Nanum Myeongjo', serif; font-size: 1.2rem; color: var(--wine); margin-bottom: 0.3rem; }
-.modal p { font-size: 0.83rem; color: #9a7a6a; margin-bottom: 1.4rem; }
-.modal label { display: block; font-size: 0.82rem; color: var(--ink); margin-bottom: 0.3rem; font-weight: 600; }
-.modal input {
-  width: 100%; padding: 0.65rem 0.9rem; border: 1.5px solid #e8d8d0;
-  border-radius: 10px; font-family: 'Gowun Dodum', sans-serif; font-size: 0.9rem;
-  outline: none; margin-bottom: 1rem; transition: border-color 0.2s; color: var(--ink);
-}
-.modal input:focus { border-color: var(--rose); }
-.modal-btns { display: flex; gap: 0.7rem; justify-content: flex-end; margin-top: 0.5rem; }
-.btn-cancel {
-  padding: 0.55rem 1.3rem; border-radius: 20px; border: 1.5px solid #e0d0c8;
-  background: white; color: #9a7a6a; cursor: pointer;
-  font-family: 'Gowun Dodum', sans-serif; font-size: 0.88rem; transition: all 0.2s;
-}
-.btn-cancel:hover { border-color: var(--rose); color: var(--rose); }
-.btn-save {
-  padding: 0.55rem 1.5rem; border-radius: 20px; border: none;
-  background: var(--wine); color: white; cursor: pointer;
-  font-family: 'Gowun Dodum', sans-serif; font-size: 0.88rem; font-weight: 700; transition: all 0.2s;
-}
-.btn-save:hover { background: var(--rose); transform: translateY(-1px); }
-.btn-delete {
-  padding: 0.55rem 1rem; border-radius: 20px; border: 1.5px solid #e0d0c8;
-  background: white; color: #c07070; cursor: pointer; margin-right: auto;
-  font-family: 'Gowun Dodum', sans-serif; font-size: 0.82rem; transition: all 0.2s;
-}
-.btn-delete:hover { background: #fff0f0; border-color: #c07070; }
-
-/* scroll reveal */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; }
-.reveal.visible { opacity: 1; transform: none; }
-.fade-in { animation: fadeUp 0.7s ease both; }
-.delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.25s; } .delay-3 { animation-delay: 0.4s; }
-@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.reveal.visible{opacity:1;transform:none;}
+.fade-in{animation:fadeUp .7s ease both;}
+.delay-1{animation-delay:.1s}.delay-2{animation-delay:.25s}.delay-3{animation-delay:.4s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-badge fade-in">🗓️ 2025년 5월 24일 ~ 25일 · 1박 2일</div>
-  <h1 class="fade-in delay-1">우리의 서울 데이트<br><span>어디서 놀까? 🌸</span></h1>
-  <p class="hero-sub fade-in delay-2">뀨</p>
+  <h1 class="fade-in delay-1">우리의 데이트 플랜<br><span>어디서 놀까? 🌸</span></h1>
+  <p class="hero-sub fade-in delay-2">장거리라서 더 특별한 우리만의 계획들</p>
   <nav class="plan-nav fade-in delay-3">
-    <a href="#plan-a" class="a">🎸 Plan A · 홍대</a>
-    <a href="#plan-b" class="b">🎭 Plan B · 대학로/건대</a>
-    <a href="#plan-c" class="c">🚂 Plan C · 춘천</a>
+    <a href="#plan-a" class="a">🚗 Plan A · 춘천+건대</a>
+    <a href="#plan-b" class="b">🎪 Plan B · 일산+건대</a>
+    <a href="#plan-c" class="c">✨ Plan C · TBD</a>
   </nav>
 </section>
 
-<!-- CAR SVG template (reusable via JS clone) -->
-<template id="carSVG">
-  <svg width="52" height="28" viewBox="0 0 60 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="4" y="12" width="52" height="14" rx="4" fill="#e84560"/>
-    <path d="M10 12 L16 4 H44 L50 12Z" fill="#c0334d"/>
-    <rect x="16" y="5" width="12" height="7" rx="2" fill="#a8d8ea" opacity="0.9"/>
-    <rect x="31" y="5" width="12" height="7" rx="2" fill="#a8d8ea" opacity="0.9"/>
-    <circle cx="16" cy="27" r="5" fill="#2d2016"/><circle cx="16" cy="27" r="2.5" fill="#888"/>
-    <circle cx="44" cy="27" r="5" fill="#2d2016"/><circle cx="44" cy="27" r="2.5" fill="#888"/>
-    <rect x="50" y="15" width="6" height="4" rx="1" fill="#ffe066"/>
-    <rect x="4" y="15" width="4" height="4" rx="1" fill="#ff6b6b" opacity="0.8"/>
-  </svg>
-</template>
-
-<!-- ══════════ PLAN A ══════════ -->
+<!-- ══════════════════════════════════
+     PLAN A : 수서→춘천 당일치기 + 건대 2일차
+══════════════════════════════════ -->
 <section id="plan-a" class="plan-section anchor">
   <div class="section-intro reveal">
     <div class="plan-tag tag-a">Plan A</div>
-    <h2>🎸 홍대 데이트</h2>
-    <p>다양한 놀거리가 마나용</p>
+    <h2>🚗 춘천 당일치기 + 건대</h2>
+    <p>Day 1 수서 출발 → 춘천 닭갈비·레일바이크·카페 → 건대 숙소 · Day 2 건대 하이디라오 + 황금열쇠</p>
   </div>
   <div class="info-banner reveal">
-    <div class="info-item"><span class="val">홍대/합정 일대</span><span class="label">📍 지역</span></div>
-    <div class="info-item"><span class="val">도보 중심</span><span class="label">🚶 이동</span></div>
-    <div class="info-item"><span class="val">??만원/인</span><span class="label">💰 비용</span></div>
+    <div class="info-item"><span class="val">수서 → 춘천 → 건대</span><span class="label">📍 동선</span></div>
+    <div class="info-item"><span class="val">자가용</span><span class="label">🚗 이동</span></div>
+    <div class="info-item"><span class="val">1박 2일</span><span class="label">🌙 일정</span></div>
   </div>
   <div class="pros-cons reveal">
     <div class="pros-box"><h4>✨ 장점</h4><ul>
-      <li>감성 카페 & 디저트 천국</li><li>버스킹으로 자연스러운 분위기</li>
-      <li>쇼핑·포토부스 전부 도보 거리</li><li>밤에도 즐길 거리 넘침</li><li>인증샷 명소가 곳곳에</li>
+      <li>춘천 자연 + 도심 건대 둘 다 즐기기</li>
+      <li>1.5닭갈비 + 레일바이크 = 완벽한 데이트</li>
+      <li>리버레인 의암호 뷰 카페 감성</li>
+      <li>2일차 하이디라오 + 방탈출로 알찬 마무리</li>
     </ul></div>
     <div class="cons-box"><h4>💭 단점</h4><ul>
-      <li>주말 인파 굉장히 많음</li><li>카페 웨이팅 길어질 수 있음</li>
-      <li>숙소 가격이 다소 높음</li><li>주차 어렵고 비쌈</li>
+      <li>당일 드라이브 거리 꽤 있음 (편도 약 1.5h)</li>
+      <li>레일바이크 사전 예약 필수</li>
+      <li>하이디라오 캐치테이블 예약 필수</li>
     </ul></div>
   </div>
 
-  <div class="day-header reveal">
+  <!-- DAY 1 -->
+  <div class="day-header reveal"><span class="day-badge">Day 1</span> 5월 24일 (토) · 춘천 당일치기</div>
+  <div class="route-col reveal">
 
-  <span class="day-badge">Day 1</span> 5월 24일 (토)
-
-</div>
-
-<div class="route-col reveal">
-
-  <!-- 수서역 -->
-
-  <div class="stop-card">
-
-    <div class="stop-top">
-
-      <span class="stop-name">🚉 수서역 출발</span>
-
-      <span class="stop-time">출발 시간 자유</span>
-
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">📍 수서 출발</span><span class="stop-time">12:20 PM</span></div>
+      <p class="stop-desc">남자친구 차로 출발! 경춘고속도로 타고 춘천으로 고고 🚗 신나는 드라이브의 시작.</p>
+      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
     </div>
 
-    <p class="stop-desc">
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="80"
+        data-from="수서 (서울)" data-to="1.5닭갈비 (춘천 후평동)"
+        data-fx="80" data-fy="160" data-tx="430" data-ty="70"
+        data-path="M80,160 C100,150 130,130 170,112 C220,90 290,78 360,72 L430,70"
+        data-landmarks='[{"x":55,"y":162,"label":"수서"},{"x":195,"y":100,"label":"경춘고속도로"},{"x":310,"y":73,"label":"춘천IC"},{"x":452,"y":68,"label":"후평동"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 1시간 20분</strong> · 수서 → 춘천 후평동</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 1시간 20분</strong></div>
+            <div class="map-chip">📏 약 80km · 경춘고속도로</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      드디어 서울 데이트 시작 🌸 <br>
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🍗 1.5닭갈비 (일점오닭갈비)</span><span class="stop-time">2:00 PM</span></div>
+      <p class="stop-desc">1989년 창업 춘천 현지인 최애 닭갈비집! 카레 베이스 특제 양념 + 직원이 직접 볶아줌. 닭갈비 2인분 + 볶음밥 필수. 주말 웨이팅 있을 수 있으니 일찍 도착 추천.</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/1.5%EB%8B%AD%EA%B0%88%EB%B9%84%20%EC%B6%98%EC%B2%9C%20%ED%9B%84%ED%8F%89%EB%8F%99" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
 
-      수서역에서 홍대 하이디라오까지 약 40분 정도 이동!
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="25"
+        data-from="1.5닭갈비 (후평동)" data-to="김유정레일바이크"
+        data-fx="80" data-fy="130" data-tx="420" data-ty="80"
+        data-path="M80,130 C130,120 190,105 250,95 C310,85 370,82 420,80"
+        data-landmarks='[{"x":55,"y":130,"label":"후평동"},{"x":240,"y":95,"label":"남춘천IC 방향"},{"x":442,"y":78,"label":"김유정역"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 25분</strong> · 후평동 → 김유정레일바이크</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 25분</strong></div>
+            <div class="map-chip">📏 약 18km</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    </p>
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🚵 김유정 레일바이크</span><span class="stop-time">2:30 PM</span></div>
+      <p class="stop-desc">북한강 절경 따라 달리는 커플 레일바이크! 약 5.5km, 편도 40분. 돌아올 때는 열차 탑승. 사전 예약 필수!</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%EA%B9%80%EC%9C%A0%EC%A0%95%EB%A0%88%EC%9D%BC%EB%B0%94%EC%9D%B4%ED%81%AC" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <a href="https://www.railpark.co.kr/" target="_blank" class="link-pill sage">🎟️ 레일바이크 예약</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
 
-    <div class="stop-links">
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="20"
+        data-from="김유정레일바이크" data-to="리버레인 카페 (의암호)"
+        data-fx="420" data-fy="80" data-tx="100" data-ty="140"
+        data-path="M420,80 C380,88 330,100 270,115 C210,130 160,137 100,140"
+        data-landmarks='[{"x":442,"y":78,"label":"김유정역"},{"x":280,"y":108,"label":"춘천 시내"},{"x":72,"y":140,"label":"리버레인"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 20분</strong> · 김유정역 → 리버레인 카페</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 20분</strong></div>
+            <div class="map-chip">📏 약 14km</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <a href="https://map.naver.com/p/search/수서역"
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">☕ 리버레인 카페</span><span class="stop-time">4:30 ~ 5:00 PM</span></div>
+      <p class="stop-desc">의암호 + 레고랜드 + 춘천대교가 한눈에! 4층 루프탑 or 3층 물멍 창가 추천. 베이커리도 다양. 노을 질 때 타이밍 맞추면 감성 폭발 🌅</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%EB%A6%AC%EB%B2%84%EB%A0%88%EC%9D%B8%20%EC%B9%B4%ED%8E%98%20%EC%B6%98%EC%B2%9C" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
 
-         target="_blank"
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="90"
+        data-from="리버레인 카페 (춘천)" data-to="건대 숙소 (예정)"
+        data-fx="100" data-fy="80" data-tx="430" data-ty="150"
+        data-path="M100,80 C130,88 170,100 220,110 C280,122 340,133 390,143 L430,150"
+        data-landmarks='[{"x":72,"y":78,"label":"춘천 리버레인"},{"x":220,"y":105,"label":"경춘고속도로"},{"x":340,"y":128,"label":"강변북로"},{"x":452,"y":150,"label":"건대입구"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 1시간 30분</strong> · 춘천 → 건대 숙소</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 1시간 30분</strong></div>
+            <div class="map-chip">📏 약 95km · 경춘고속도로</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-         class="link-pill">
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🏨 건대 숙소 체크인</span><span class="stop-time">저녁 도착</span></div>
+      <p class="stop-desc">건대입구역 근처 숙소 체크인 후 잠깐 쉬기. 짐 풀고 저녁 준비!</p>
+      <div class="stop-links">
+        <span class="tbd-badge">📌 숙소 미정</span>
+        <span class="link-pill add" onclick="openModal(this)">＋ 숙소 링크 추가</span>
+      </div>
+    </div>
 
-        🗺️ 수서역 지도
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="walk" data-min="10"
+        data-from="건대 숙소" data-to="건대 먹자골목"
+        data-fx="100" data-fy="110" data-tx="400" data-ty="110"
+        data-path="M100,110 C180,110 300,110 400,110"
+        data-landmarks='[{"x":68,"y":108,"label":"숙소"},{"x":260,"y":95,"label":"건대입구역"},{"x":422,"y":108,"label":"먹자골목"}]'>
+        <span class="icon">🚶</span>
+        <span>도보 <strong>약 10분</strong> · 숙소 → 건대 먹자골목</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚶 도보</div>
+            <div class="map-chip">⏱ <strong>약 10분</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      </a>
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🍺 건대 먹자골목 술집</span><span class="stop-time">8:00 PM ~</span></div>
+      <p class="stop-desc">건대 먹자골목에서 오늘 하루 마무리 술 한 잔 🥂 건배!</p>
+      <div class="stop-links">
+        <span class="tbd-badge">📌 술집 미정</span>
+        <span class="link-pill add" onclick="openModal(this)">＋ 술집 링크 추가</span>
+      </div>
+    </div>
 
+  </div><!-- /route-col day1 -->
+
+  <!-- DAY 2 -->
+  <div class="day-header green reveal"><span class="day-badge green">Day 2</span> 5월 25일 (일) · 건대</div>
+  <div class="route-col reveal">
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🏨 숙소 체크아웃</span><span class="stop-time">12:00 PM</span></div>
+      <p class="stop-desc">느긋하게 일어나서 체크아웃. 오늘도 알찬 하루 시작!</p>
+      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
+    </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="walk" data-min="10"
+        data-from="건대 숙소" data-to="하이디라오 건대점"
+        data-fx="100" data-fy="110" data-tx="400" data-ty="110"
+        data-path="M100,110 C200,110 300,110 400,110"
+        data-landmarks='[{"x":68,"y":108,"label":"숙소"},{"x":260,"y":95,"label":"건대입구역"},{"x":422,"y":108,"label":"하이디라오"}]'>
+        <span class="icon">🚶</span>
+        <span>도보 <strong>약 10분</strong> · 숙소 → 하이디라오 건대점</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚶 도보</div>
+            <div class="map-chip">⏱ <strong>약 10분</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🍲 하이디라오 건대점</span><span class="stop-time">12:30 PM</span></div>
+      <p class="stop-desc">중국 프리미엄 샤브샤브! 2인 기준 약 8~9만원. 말랑두부 + 두유피튀김 + 마라우유탕 강추. 주말 110팀 웨이팅 가능 — 캐치테이블 예약 필수!</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%ED%95%98%EC%9D%B4%EB%94%94%EB%9D%BC%EC%98%A4%20%EA%B1%B4%EB%8C%80%EC%A0%90" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <a href="https://app.catchtable.co.kr/ct/shop/haidilao_konkuk" target="_blank" class="link-pill blue">📋 캐치테이블 예약</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="walk" data-min="5"
+        data-from="하이디라오 건대점" data-to="황금열쇠 건대점"
+        data-fx="100" data-fy="110" data-tx="400" data-ty="110"
+        data-path="M100,110 C180,105 300,108 400,110"
+        data-landmarks='[{"x":68,"y":108,"label":"하이디라오"},{"x":260,"y":95,"label":"건대 로데오거리"},{"x":422,"y":108,"label":"황금열쇠"}]'>
+        <span class="icon">🚶</span>
+        <span>도보 <strong>약 5분</strong> · 하이디라오 → 황금열쇠 건대점</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚶 도보</div>
+            <div class="map-chip">⏱ <strong>약 5분</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🔐 황금열쇠 건대점 (방탈출)</span><span class="stop-time">3:00 PM</span></div>
+      <p class="stop-desc">건대 대표 방탈출 카페! 커플이 머리 맞대고 풀다 보면 사이 더 돈독해짐 😂 사전 예약 추천.</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%ED%99%A9%EA%B8%88%EC%97%B4%EC%87%A0%20%EA%B1%B4%EB%8C%80%EC%A0%90" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="30"
+        data-from="황금열쇠 건대점" data-to="수서역 (귀가)"
+        data-fx="80" data-fy="80" data-tx="430" data-ty="150"
+        data-path="M80,80 C120,90 180,108 250,120 C320,132 380,143 430,150"
+        data-landmarks='[{"x":52,"y":78,"label":"건대입구"},{"x":245,"y":112,"label":"강변북로"},{"x":380,"y":138,"label":"잠실 방향"},{"x":452,"y":150,"label":"수서"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 30분</strong> · 건대 → 수서 귀가</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 30분</strong></div>
+            <div class="map-chip">📏 약 15km</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🏠 수서 귀가</span><span class="stop-time">저녁</span></div>
+      <p class="stop-desc">아쉬운 작별 인사 🥹 또 만날 날까지 잘 가요 ♡</p>
+      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
     </div>
 
   </div>
-
-  <!-- road -->
-
-  <div class="road-segment">
-
-    <div class="road-strip">
-
-      <div class="road-dashes"></div>
-
-      <div class="car-wrap"></div>
-
-    </div>
-
-    <div class="travel-info">
-
-      🚇 지하철 <strong>약 40분</strong> · 수서 → 홍대입구
-
-    </div>
-
-  </div>
-
-  <!-- 하이디라오 -->
-
-  <div class="stop-card">
-
-    <div class="stop-top">
-
-      <span class="stop-name">🍲 하이디라오 홍대점</span>
-
-      <span class="stop-time">첫 밥!</span>
-
-    </div>
-
-    <p class="stop-desc">
-
-      하이디라오는 내가 서울 도착하기 30분 전에 캐치테이블 잡기! 🔥 <br>
-
-      웨이팅 길 수 있어서 미리 예약 필수 💕
-
-    </p>
-
-    <div class="stop-links">
-
-      <a href="https://map.naver.com/p/search/하이디라오%20홍대점"
-
-         target="_blank"
-
-         class="link-pill">
-
-         🗺️ 네이버플레이스
-
-      </a>
-
-      <a href="https://app.catchtable.co.kr/"
-
-         target="_blank"
-
-         class="link-pill sage">
-
-         📱 캐치테이블
-
-      </a>
-
-      <span class="link-pill add" onclick="openModal(this)">
-
-        ＋ 링크 추가
-
-      </span>
-
-    </div>
-
-  </div>
-
-  <!-- road -->
-
-  <div class="road-segment">
-
-    <div class="road-strip">
-
-      <div class="road-dashes"></div>
-
-      <div class="car-wrap"></div>
-
-    </div>
-
-    <div class="travel-info">
-
-      🚶 홍대 거리 구경하면서 이동
-
-    </div>
-
-  </div>
-
-  <!-- 맛집 추천 -->
-
-  <div class="stop-card">
-
-    <div class="stop-top">
-
-      <span class="stop-name">🍜 홍대 맛집 후보들</span>
-
-      <span class="stop-time">먹고 싶은 곳 저장</span>
-
-    </div>
-
-    <p class="stop-desc">
-
-      둘 다 먹고 싶은 거 생기면 여기서 골라가기 🤍
-
-    </p>
-
-    <div class="stop-links">
-
-      <a href="https://map.naver.com/p/search/서관면옥%20홍대점"
-
-         target="_blank"
-
-         class="link-pill">
-
-         🍜 서관면옥 홍대점
-
-      </a>
-
-      <a href="https://map.naver.com/p/search/치히로%20홍대점"
-
-         target="_blank"
-
-         class="link-pill">
-
-         🍱 치히로 홍대점
-
-      </a>
-
-      <a href="https://map.naver.com/p/search/우동카덴"
-
-         target="_blank"
-
-         class="link-pill">
-
-         🍥 우동 카덴
-
-      </a>
-
-      <span class="link-pill add" onclick="openModal(this)">
-
-        ＋ 링크 추가
-
-      </span>
-
-    </div>
-
-  </div>
-
-  <!-- road -->
-
-  <div class="road-segment">
-
-    <div class="road-strip">
-
-      <div class="road-dashes"></div>
-
-      <div class="car-wrap"></div>
-
-    </div>
-
-    <div class="travel-info">
-
-      🚶 도보 <strong>약 5분</strong> · 홍대 감성 카페 이동
-
-    </div>
-
-  </div>
-
-  <!-- 토라비 -->
-
-  <div class="stop-card">
-
-    <div class="stop-top">
-
-      <span class="stop-name">☕ 토라비 카페 (Tolabi)</span>
-
-      <span class="stop-time">디저트 타임</span>
-
-    </div>
-
-    <p class="stop-desc">
-
-      홍대 평점 높은 파블로바 맛집 🤍 <br>
-
-      분위기 엄청 예쁘고 커플들이 많이 가는 감성 카페!
-
-    </p>
-
-    <div class="stop-links">
-
-      <a href="https://map.naver.com/p/search/토라비%20홍대"
-
-         target="_blank"
-
-         class="link-pill">
-
-         🗺️ 네이버 지도
-
-      </a>
-
-      <span class="link-pill add" onclick="openModal(this)">
-
-        ＋ 링크 추가
-
-      </span>
-
-    </div>
-
-  </div>
-
-</div>
 </section>
 
 <div class="wavy-divider">· · · ✿ · · ·</div>
 
-<!-- ══════════ PLAN B ══════════ -->
+<!-- ══════════════════════════════════
+     PLAN B : 수서→일산→건대 + 춘천 2일차
+══════════════════════════════════ -->
 <section id="plan-b" class="plan-section anchor">
   <div class="section-intro reveal">
     <div class="plan-tag tag-b">Plan B</div>
-    <h2>🎭 대학로 & 건대 데이트</h2>
-    <p>연극 & 문화 + 건대 맛집 거리 — 조용하고 감성적인 도심 코스</p>
+    <h2>🎪 일산 킨텍스 + 건대</h2>
+    <p>Day 1 수서 → 일산 냉면·킨텍스 스타결승 → 건대 · Day 2 춘천 당일치기</p>
   </div>
   <div class="info-banner reveal">
-    <div class="info-item"><span class="val">혜화 · 건대입구</span><span class="label">📍 지역</span></div>
-    <div class="info-item"><span class="val">지하철 + 도보</span><span class="label">🚇 이동</span></div>
-    <div class="info-item"><span class="val">3~5만원/인</span><span class="label">💰 비용</span></div>
+    <div class="info-item"><span class="val">수서 → 일산 → 건대</span><span class="label">📍 동선</span></div>
+    <div class="info-item"><span class="val">자가용</span><span class="label">🚗 이동</span></div>
+    <div class="info-item"><span class="val">1박 2일</span><span class="label">🌙 일정</span></div>
   </div>
   <div class="pros-cons reveal">
     <div class="pros-box"><h4>✨ 장점</h4><ul>
-      <li>소극장 연극으로 특별한 추억</li><li>홍대보다 여유롭고 덜 복잡</li>
-      <li>건대 맛집 거리에 먹을 것 무한</li><li>고양이 카페 힐링 체험</li><li>건국대 호수 산책 (5월 초록 절정)</li>
+      <li>스타크래프트 결승 현장 관람 (특별한 경험!)</li>
+      <li>오실장강남면옥 유명 냉면 맛집</li>
+      <li>일산 감성 카페 쿠마씨</li>
+      <li>2일차 춘천 닭갈비+레일바이크로 마무리</li>
     </ul></div>
     <div class="cons-box"><h4>💭 단점</h4><ul>
-      <li>연극 사전 예매 필수</li><li>대학로↔건대 이동 시간 소요</li>
-      <li>인스타 스팟 홍대보다 적음</li><li>밤늦게 즐길 거리 상대적으로 적음</li>
+      <li>일산↔건대 이동 시간 소요</li>
+      <li>킨텍스 티켓 사전 구매 필요</li>
+      <li>2일차 춘천 당일치기라 체력 관리 필요</li>
     </ul></div>
   </div>
 
-  <div class="day-header reveal"><span class="day-badge">Day 1</span> 5월 24일 (토)</div>
+  <!-- DAY 1 -->
+  <div class="day-header reveal"><span class="day-badge">Day 1</span> 5월 24일 (토) · 일산 + 건대</div>
   <div class="route-col reveal">
+
     <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">📍 혜화역 도착 (대학로)</span><span class="stop-time">11:00 AM</span></div>
-      <p class="stop-desc">4호선 혜화역 2번 출구. 대학로 문화의 거리 시작!</p>
+      <div class="stop-top"><span class="stop-name">📍 수서 출발</span><span class="stop-time">10:50 AM</span></div>
+      <p class="stop-desc">남자친구 차로 출발! 강변북로 or 내부순환로 타고 일산으로.</p>
       <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
     </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚶 도보 <strong>약 5분</strong> · 마로니에 공원 방향</div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="50"
+        data-from="수서 (서울)" data-to="오실장강남면옥 (일산)"
+        data-fx="430" data-fy="160" data-tx="90" data-ty="70"
+        data-path="M430,160 C390,145 340,125 280,108 C220,90 160,78 90,70"
+        data-landmarks='[{"x":452,"y":160,"label":"수서"},{"x":300,"y":108,"label":"강변북로"},{"x":180,"y":80,"label":"자유로"},{"x":62,"y":68,"label":"일산 탄현"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 50분</strong> · 수서 → 일산 탄현</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 50분</strong></div>
+            <div class="map-chip">📏 약 45km · 강변북로→자유로</div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">☕ 대학로 감성 카페 브런치</span><span class="stop-time">11:15 AM</span></div>
-      <p class="stop-desc">마로니에 공원 주변 골목 카페에서 브런치. 조용해서 대화하기 딱.</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
-    </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚶 도보 <strong>약 10분</strong> · 대학로 소극장 밀집 지역</div>
-    </div>
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🎭 소극장 연극 관람</span><span class="stop-time">2:00 PM</span></div>
-      <p class="stop-desc">100석 미만 소극장에서 로맨스/코미디 공연. 약 1~2시간. 인터파크 사전 예매 필수!</p>
+      <div class="stop-top"><span class="stop-name">🍜 오실장강남면옥</span><span class="stop-time">12:00 PM</span></div>
+      <p class="stop-desc">일산 탄현 현지인 냉면 맛집! 코다리냉면 + 수제만두가 시그니처. TV 방영 후 더 유명해진 곳. 주말 웨이팅 있을 수 있으니 일찍 도착 추천.</p>
       <div class="stop-links">
-        <a href="https://ticket.interpark.com/" target="_blank" class="link-pill sage">🎟️ 인터파크 예매</a>
+        <a href="https://map.naver.com/p/search/%EC%98%A4%EC%8B%A4%EC%9E%A5%EA%B0%95%EB%82%A8%EB%A9%B4%EC%98%A5%20%EC%9D%BC%EC%82%B0" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+      <div class="alt-box">
+        <strong>🍽️ 근처 다른 맛집 후보</strong>
+        <a href="https://map.naver.com/p/search/%EA%BD%83%ED%94%BC%EC%9A%B0%EB%8A%94%EA%B8%B0%EC%99%80%EB%B3%B4%EC%8C%88%20%EC%9D%BC%EC%82%B0%EB%B3%B8%EC%A0%90" target="_blank">꽃피우는기와보쌈 일산본점</a> ·
+        <a href="https://map.naver.com/p/search/%EA%B8%B0%EC%9A%94%ED%95%AD%20%EC%9D%BC%EC%82%B0" target="_blank">기요항</a> ·
+        <a href="https://map.naver.com/p/search/%EC%9D%BC%EC%82%B0%EB%B4%89%EC%9D%B4%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%A3%BC%EA%BE%B8%EB%AF%B8%EB%B3%B4%EC%8C%88" target="_blank">일산봉이칼국수쭈꾸미보쌈</a>
+      </div>
+    </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="15"
+        data-from="오실장강남면옥" data-to="카페 쿠마씨"
+        data-fx="90" data-fy="80" data-tx="380" data-ty="130"
+        data-path="M90,80 C150,85 220,100 290,115 C330,123 360,128 380,130"
+        data-landmarks='[{"x":62,"y":78,"label":"탄현"},{"x":235,"y":98,"label":"일산서구"},{"x":402,"y":130,"label":"쿠마씨"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 15분</strong> · 오실장강남면옥 → 카페 쿠마씨</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 15분</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">☕ 카페 쿠마씨</span><span class="stop-time">1:20 PM</span></div>
+      <p class="stop-desc">일산 감성 카페. 킨텍스 입장 전 커피 한 잔 여유롭게!</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EC%BF%A0%EB%A7%88%EC%94%A8%20%EC%9D%BC%EC%82%B0" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
         <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
       </div>
     </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚇 지하철 <strong>약 20분</strong> · 혜화 → 건대입구 (5호선 환승)</div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="10"
+        data-from="카페 쿠마씨" data-to="킨텍스 (KINTEX)"
+        data-fx="380" data-fy="130" data-tx="200" data-ty="80"
+        data-path="M380,130 C340,120 290,105 240,92 C220,86 210,83 200,80"
+        data-landmarks='[{"x":402,"y":130,"label":"쿠마씨"},{"x":290,"y":108,"label":"일산 대로"},{"x":172,"y":78,"label":"킨텍스"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 10분</strong> · 카페 쿠마씨 → 킨텍스</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 10분</strong></div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🏫 건국대 일감호 산책</span><span class="stop-time">4:30 PM</span></div>
-      <p class="stop-desc">건국대 캠퍼스 호수 산책. 5월엔 초록초록해서 데이트 최고. 벤치에 앉아 얘기하기 딱.</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
+      <div class="stop-top"><span class="stop-name">🎮 킨텍스 스타크래프트 결승전</span><span class="stop-time">1:50 PM</span></div>
+      <p class="stop-desc">킨텍스 제1전시장! 스타크래프트 리그 결승 현장 관람. 4~5시까지 관람 후 건대로 이동.</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%ED%82%A8%ED%85%8D%EC%8A%A4%20%EC%9D%BC%EC%82%B0" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 티켓 링크 추가</span>
+      </div>
     </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚶 도보 <strong>약 10분</strong> · 건대 맛의 거리</div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="60"
+        data-from="킨텍스 (일산)" data-to="건대 숙소"
+        data-fx="200" data-fy="80" data-tx="430" data-ty="150"
+        data-path="M200,80 C240,90 290,105 340,120 C380,132 410,143 430,150"
+        data-landmarks='[{"x":172,"y":78,"label":"킨텍스"},{"x":300,"y":108,"label":"강변북로"},{"x":380,"y":138,"label":"성수 방향"},{"x":452,"y":150,"label":"건대입구"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 1시간</strong> · 킨텍스 → 건대 숙소</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 1시간</strong></div>
+            <div class="map-chip">📏 약 45km</div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🍽️ 건대 맛의 거리 + 고양이 카페</span><span class="stop-time">6:00 PM</span></div>
-      <p class="stop-desc">저녁은 건대 맛의 거리! 식후엔 고양이 카페 우주로켓 (평점 4.8, 힐링 보장).</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
+      <div class="stop-top"><span class="stop-name">🏨 건대 숙소 + 자유 시간</span><span class="stop-time">4:00 ~ 8:00 PM</span></div>
+      <p class="stop-desc">숙소에서 쉬거나 건대 주변 방탈출 or 건대 스트리트 구경. 8시까지 자유롭게!</p>
+      <div class="stop-links">
+        <span class="tbd-badge">📌 숙소 미정</span>
+        <a href="https://map.naver.com/p/search/%EA%B1%B4%EB%8C%80%20%EB%B0%A9%ED%83%88%EC%B6%9C" target="_blank" class="link-pill sage">🔐 건대 방탈출 검색</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
     </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="walk" data-min="10"
+        data-from="건대 숙소" data-to="건대 먹자골목"
+        data-fx="100" data-fy="110" data-tx="400" data-ty="110"
+        data-path="M100,110 C200,110 300,110 400,110"
+        data-landmarks='[{"x":68,"y":108,"label":"숙소"},{"x":260,"y":95,"label":"건대입구역"},{"x":422,"y":108,"label":"먹자골목"}]'>
+        <span class="icon">🚶</span>
+        <span>도보 <strong>약 10분</strong> · 숙소 → 건대 먹자골목</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚶 도보</div>
+            <div class="map-chip">⏱ <strong>약 10분</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🍺 건대 먹자골목 술집</span><span class="stop-time">8:00 PM ~</span></div>
+      <p class="stop-desc">건대 먹자골목에서 오늘 하루 마무리! 킨텍스 결승 얘기 하면서 건배 🥂</p>
+      <div class="stop-links">
+        <span class="tbd-badge">📌 술집 미정</span>
+        <span class="link-pill add" onclick="openModal(this)">＋ 술집 링크 추가</span>
+      </div>
+    </div>
+
   </div>
 
-  <div class="day-header green reveal"><span class="day-badge green">Day 2</span> 5월 25일 (일)</div>
+  <!-- DAY 2 -->
+  <div class="day-header green reveal"><span class="day-badge green">Day 2</span> 5월 25일 (일) · 춘천 당일치기</div>
   <div class="route-col reveal">
+
     <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🥞 건대 브런치</span><span class="stop-time">10:00 AM</span></div>
-      <p class="stop-desc">건대 근처 브런치 카페에서 느긋하게 아침. 어제 연극 얘기하면서 ☕</p>
+      <div class="stop-top"><span class="stop-name">🏨 숙소 체크아웃</span><span class="stop-time">12:00 PM</span></div>
+      <p class="stop-desc">체크아웃 후 바로 춘천으로 출발!</p>
       <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
     </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚇 지하철 <strong>약 15분</strong> · 건대입구 → 잠실 (2호선)</div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="80"
+        data-from="건대 (서울)" data-to="1.5닭갈비 (춘천)"
+        data-fx="80" data-fy="150" data-tx="430" data-ty="70"
+        data-path="M80,150 C110,135 150,115 200,100 C260,83 340,74 430,70"
+        data-landmarks='[{"x":52,"y":150,"label":"건대입구"},{"x":205,"y":95,"label":"경춘고속도로"},{"x":340,"y":72,"label":"춘천IC"},{"x":452,"y":68,"label":"후평동"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 1시간 20분</strong> · 건대 → 춘천 후평동</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 1시간 20분</strong></div>
+            <div class="map-chip">📏 약 80km</div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🏙️ 석촌호수 마지막 산책</span><span class="stop-time">11:30 AM</span></div>
-      <p class="stop-desc">롯데월드타워 뷰 + 호수 반영 = 인생샷. 마지막 데이트 코스 ♡</p>
+      <div class="stop-top"><span class="stop-name">🍗 1.5닭갈비 (일점오닭갈비)</span><span class="stop-time">1:30 PM</span></div>
+      <p class="stop-desc">어제 못 먹은 춘천 닭갈비! 카레 양념 + 볶음밥 세트로 든든하게.</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/1.5%EB%8B%AD%EA%B0%88%EB%B9%84%20%EC%B6%98%EC%B2%9C%20%ED%9B%84%ED%8F%89%EB%8F%99" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="25"
+        data-from="1.5닭갈비 (후평동)" data-to="김유정레일바이크"
+        data-fx="80" data-fy="130" data-tx="420" data-ty="80"
+        data-path="M80,130 C140,118 210,100 280,90 C340,82 380,80 420,80"
+        data-landmarks='[{"x":55,"y":130,"label":"후평동"},{"x":260,"y":90,"label":"남춘천 방향"},{"x":442,"y":78,"label":"김유정역"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 25분</strong> · 후평동 → 김유정레일바이크</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 25분</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🚵 김유정 레일바이크</span><span class="stop-time">3:00 PM</span></div>
+      <p class="stop-desc">북한강 뷰 레일바이크! 시간 여유 있으면 이후 카페도 들르기.</p>
+      <div class="stop-links">
+        <a href="https://map.naver.com/p/search/%EA%B9%80%EC%9C%A0%EC%A0%95%EB%A0%88%EC%9D%BC%EB%B0%94%EC%9D%B4%ED%81%AC" target="_blank" class="link-pill">🗺️ 네이버 지도</a>
+        <a href="https://www.railpark.co.kr/" target="_blank" class="link-pill sage">🎟️ 레일바이크 예약</a>
+        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
+      </div>
+    </div>
+
+    <div class="transit-block">
+      <button class="transit-btn" onclick="toggleMap(this)"
+        data-mode="car" data-min="90"
+        data-from="춘천" data-to="수서 (귀가)"
+        data-fx="80" data-fy="80" data-tx="430" data-ty="155"
+        data-path="M80,80 C120,95 170,110 230,122 C290,135 360,147 430,155"
+        data-landmarks='[{"x":52,"y":78,"label":"춘천"},{"x":220,"y":115,"label":"경춘고속도로"},{"x":360,"y":142,"label":"강변북로"},{"x":452,"y":155,"label":"수서"}]'>
+        <span class="icon">🚗</span>
+        <span>자가용 <strong>약 1시간 30분</strong> · 춘천 → 수서 귀가</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="map-panel">
+        <div class="map-inner">
+          <svg class="route-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="map-info-bar">
+            <div class="map-chip">🚗 자가용</div>
+            <div class="map-chip">⏱ <strong>약 1시간 30분</strong></div>
+            <div class="map-chip">📏 약 95km</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop-card">
+      <div class="stop-top"><span class="stop-name">🏠 수서 귀가</span><span class="stop-time">저녁</span></div>
+      <p class="stop-desc">아쉬운 작별 인사 🥹 또 만날 날까지 잘 가요 ♡</p>
       <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
     </div>
+
   </div>
 </section>
 
 <div class="wavy-divider">· · · ✿ · · ·</div>
 
-<!-- ══════════ PLAN C ══════════ -->
+<!-- PLAN C placeholder -->
 <section id="plan-c" class="plan-section anchor">
   <div class="section-intro reveal">
     <div class="plan-tag tag-c">Plan C</div>
-    <h2>🚂 강원도 춘천 데이트</h2>
-    <p>남이섬 + 닭갈비 + 소양강 — 서울 탈출! 자연 속 낭만 여행</p>
+    <h2>✨ Plan C</h2>
+    <p>곧 추가될 예정이에요 🌸</p>
   </div>
-  <div class="info-banner reveal">
-    <div class="info-item"><span class="val">서울 → 춘천 (1시간)</span><span class="label">🚄 거리</span></div>
-    <div class="info-item"><span class="val">ITX-청춘 or 자가용</span><span class="label">🚗 이동</span></div>
-    <div class="info-item"><span class="val">5~8만원/인</span><span class="label">💰 비용</span></div>
-  </div>
-  <div class="pros-cons reveal">
-    <div class="pros-box"><h4>✨ 장점</h4><ul>
-      <li>서울 탈출, 진짜 여행 느낌</li><li>남이섬 — 자연 속 로맨틱 산책</li>
-      <li>춘천 닭갈비 원조 맛집</li><li>5월 자연 경치 최고</li><li>기차 여행 자체가 설렘</li>
-    </ul></div>
-    <div class="cons-box"><h4>💭 단점</h4><ul>
-      <li>이동 시간 왕복 2~3시간</li><li>남이섬 주말 관광객 많음</li>
-      <li>자가용 없으면 이동 불편</li><li>숙소 선택지 서울보다 적음</li>
-    </ul></div>
-  </div>
-
-  <div class="day-header reveal"><span class="day-badge">Day 1</span> 5월 24일 (토)</div>
-  <div class="route-col reveal">
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🚂 청량리역 출발</span><span class="stop-time">7:30 AM</span></div>
-      <p class="stop-desc">ITX-청춘으로 출발! 기차 안에서 간식 먹으며 설레는 이동. 코레일 사전 예매 필수.</p>
-      <div class="stop-links">
-        <a href="https://www.letskorail.com/" target="_blank" class="link-pill">🎟️ 코레일 예매</a>
-        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
-      </div>
-    </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚂 ITX <strong>약 1시간 10분</strong> · 청량리 → 춘천역</div>
-    </div>
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🏝️ 남이섬 (나미나루)</span><span class="stop-time">10:00 AM</span></div>
-      <p class="stop-desc">페리 타고 들어가는 낭만! 5월 초록 절정. 자전거 대여해서 섬 한 바퀴 (약 30~40분). 겨울연가 촬영지.</p>
-      <div class="stop-links">
-        <a href="https://www.namisum.com/" target="_blank" class="link-pill">🌿 남이섬 공식</a>
-        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
-      </div>
-    </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚌 버스/택시 <strong>약 40분</strong> · 나미나루 → 춘천 명동 닭갈비 골목</div>
-    </div>
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🍗 춘천 명동 닭갈비 골목</span><span class="stop-time">1:30 PM</span></div>
-      <p class="stop-desc">점심은 무조건 춘천 닭갈비! 닭갈비 + 막국수가 정석. 치즈 추가 필수. 1인 약 13,000원.</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
-    </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚶 도보 <strong>약 15분</strong> · 의암호 뷰 카페 방향</div>
-    </div>
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">☕ 의암호 뷰 카페</span><span class="stop-time">3:00 PM</span></div>
-      <p class="stop-desc">호수 뷰 보이는 카페에서 커피 한 잔. 노을 보면서 쉬기. 이후 숙소 체크인.</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
-    </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚶 도보 <strong>약 15분</strong> · 소양강 스카이워크</div>
-    </div>
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🌅 소양강 스카이워크 + 저녁</span><span class="stop-time">5:30 PM</span></div>
-      <p class="stop-desc">투명 유리 스카이워크 같이 건너보기 🤣 저녁은 닭갈비 or 막국수 한 번 더!</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
-    </div>
-  </div>
-
-  <div class="day-header green reveal"><span class="day-badge green">Day 2</span> 5월 25일 (일)</div>
-  <div class="route-col reveal">
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🚵 김유정역 레일바이크</span><span class="stop-time">9:30 AM</span></div>
-      <p class="stop-desc">커플이 함께 페달 밟는 레일바이크! 약 5km, 40분 소요. 예약 필수.</p>
-      <div class="stop-links">
-        <a href="https://www.railpark.co.kr/" target="_blank" class="link-pill">🎟️ 레일바이크 예약</a>
-        <span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span>
-      </div>
-    </div>
-    <div class="road-segment">
-      <div class="road-strip"><div class="road-dashes"></div><div class="car-wrap"></div></div>
-      <div class="travel-info">🚂 ITX <strong>약 1시간 10분</strong> · 춘천 → 청량리 귀가</div>
-    </div>
-    <div class="stop-card">
-      <div class="stop-top"><span class="stop-name">🚂 춘천역 출발 (귀가)</span><span class="stop-time">2:00 PM</span></div>
-      <p class="stop-desc">기차 안에서 여행 사진 같이 보면서 추억 정리. 아쉬운 작별 인사 🥹</p>
-      <div class="stop-links"><span class="link-pill add" onclick="openModal(this)">＋ 링크 추가</span></div>
-    </div>
-  </div>
+  <div class="coming-soon reveal">계획 작성 중... ✍️<br><small style="font-family:'Gowun Dodum',sans-serif;font-size:.9rem;color:#bba090">Plan C가 확정되면 여기에 추가할게요!</small></div>
 </section>
 
 <footer>
   어느 플랜을 골라도<br>같이 있으면 다 행복할 거야 🌸
-  <small>Made with 💕 · 장소 카드의 ＋ 링크 추가 버튼으로 직접 편집 / 더블클릭으로 수정해요</small>
+  <small>이동 버튼 클릭 → 지도 + 차 애니메이션 · ＋ 버튼으로 링크 추가 · 더블클릭으로 수정</small>
 </footer>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <h3 id="modalTitle">링크 추가</h3>
-    <p id="modalSub">이 장소의 링크를 추가해요 (카카오맵, 네이버 지도, 인스타 등)</p>
-    <label>링크 제목 / 장소 이름</label>
+    <p id="modalSub">이 장소의 링크를 추가해요</p>
+    <label>링크 제목</label>
     <input type="text" id="modalLabel" placeholder="예: 네이버 지도, 인스타그램, 예약 페이지">
     <label>URL 주소</label>
     <input type="url" id="modalUrl" placeholder="https://...">
@@ -806,86 +790,143 @@ footer small { display: block; font-family: 'Gowun Dodum', sans-serif; font-size
 </div>
 
 <script>
-// ── inject car SVGs into all .car-wrap elements
-document.querySelectorAll('.car-wrap').forEach(wrap => {
-  const tpl = document.getElementById('carSVG');
-  wrap.appendChild(tpl.content.cloneNode(true));
+/* SCROLL REVEAL */
+const revObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});
 });
 
-// ── scroll reveal
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+/* ══════ MAP DRAW + CAR ANIM ══════ */
+const modeStyle={
+  walk:{road:'#b0c4b0',route:'#4caf50'},
+  subway:{road:'#b0b8d0',route:'#3f51b5'},
+  train:{road:'#d0b8a0',route:'#e65100'},
+  car:{road:'#c8c0a8',route:'#f57f17'},
+};
+const modeEmoji={walk:'🚶',subway:'🚇',train:'🚂',car:'🚗'};
 
-// ── smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const t = document.querySelector(a.getAttribute('href'));
-    if(t) t.scrollIntoView({ behavior: 'smooth' });
+function drawMap(btn,svg){
+  const d=btn.dataset, mode=d.mode||'car', st=modeStyle[mode]||modeStyle.car;
+  const W=520,H=200, fx=+d.fx,fy=+d.fy,tx=+d.tx,ty=+d.ty, pathD=d.path;
+  let lms=[]; try{lms=JSON.parse(d.landmarks||'[]');}catch(e){}
+  const ns='http://www.w3.org/2000/svg';
+  svg.innerHTML='';
+
+  /* defs */
+  const defs=document.createElementNS(ns,'defs');
+  defs.innerHTML=`<filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.25)"/></filter>`;
+  svg.appendChild(defs);
+
+  /* bg */
+  const bg=document.createElementNS(ns,'rect');
+  bg.setAttribute('width',W);bg.setAttribute('height',H);bg.setAttribute('fill','#eef5f0');bg.setAttribute('rx','10');
+  svg.appendChild(bg);
+
+  /* grid */
+  for(let x=40;x<W;x+=60){const l=document.createElementNS(ns,'line');l.setAttribute('x1',x);l.setAttribute('y1',0);l.setAttribute('x2',x);l.setAttribute('y2',H);l.setAttribute('stroke','#d8ead8');l.setAttribute('stroke-width','1');svg.appendChild(l);}
+  for(let y=30;y<H;y+=45){const l=document.createElementNS(ns,'line');l.setAttribute('x1',0);l.setAttribute('y1',y);l.setAttribute('x2',W);l.setAttribute('y2',y);l.setAttribute('stroke','#d8ead8');l.setAttribute('stroke-width','1');svg.appendChild(l);}
+
+  /* road bg */
+  const rb=document.createElementNS(ns,'path');rb.setAttribute('d',pathD);rb.setAttribute('fill','none');rb.setAttribute('stroke',st.road);rb.setAttribute('stroke-width','14');rb.setAttribute('stroke-linecap','round');svg.appendChild(rb);
+
+  /* road center */
+  const rc=document.createElementNS(ns,'path');rc.setAttribute('d',pathD);rc.setAttribute('fill','none');rc.setAttribute('stroke','#f5f0e8');rc.setAttribute('stroke-width','8');rc.setAttribute('stroke-linecap','round');svg.appendChild(rc);
+
+  /* route line (animated) */
+  const rl=document.createElementNS(ns,'path');rl.setAttribute('d',pathD);rl.setAttribute('fill','none');rl.setAttribute('stroke',st.route);rl.setAttribute('stroke-width','4');rl.setAttribute('stroke-linecap','round');rl.setAttribute('stroke-dasharray','0 9999');svg.appendChild(rl);
+
+  /* dash overlay */
+  const dl=document.createElementNS(ns,'path');dl.setAttribute('d',pathD);dl.setAttribute('fill','none');dl.setAttribute('stroke','rgba(255,255,255,.55)');dl.setAttribute('stroke-width','2');dl.setAttribute('stroke-dasharray','8 10');dl.setAttribute('stroke-linecap','round');svg.appendChild(dl);
+
+  /* landmarks */
+  lms.forEach(lm=>{
+    const cx=+lm.x,cy=+lm.y;
+    const c=document.createElementNS(ns,'circle');c.setAttribute('cx',cx);c.setAttribute('cy',cy);c.setAttribute('r','4');c.setAttribute('fill','white');c.setAttribute('stroke','#aaa');c.setAttribute('stroke-width','1.5');svg.appendChild(c);
+    const rw=lm.label.length*6.5+10;
+    const lx=cx+7,ly=cy-12;
+    const rect=document.createElementNS(ns,'rect');rect.setAttribute('x',lx-2);rect.setAttribute('y',ly-11);rect.setAttribute('width',rw);rect.setAttribute('height','14');rect.setAttribute('fill','rgba(255,255,255,.88)');rect.setAttribute('rx','4');svg.appendChild(rect);
+    const t=document.createElementNS(ns,'text');t.setAttribute('x',lx+1);t.setAttribute('y',ly);t.setAttribute('font-size','9.5');t.setAttribute('fill','#555');t.setAttribute('font-family','Gowun Dodum,sans-serif');t.textContent=lm.label;svg.appendChild(t);
   });
-});
 
-// ── MODAL
-let currentPill = null;
-let isEditing = false;
+  /* pins */
+  drawPin(svg,fx,fy,st.route,'출발',true,ns);
+  drawPin(svg,tx,ty,'#e84560','도착',false,ns);
 
-function openModal(pill) {
-  currentPill = pill;
-  isEditing = pill.classList.contains('existing');
-  const del = document.getElementById('btnDelete');
-  document.getElementById('modalTitle').textContent = isEditing ? '링크 수정' : '링크 추가';
-  document.getElementById('modalSub').textContent = isEditing
-    ? '링크 정보를 수정하거나 삭제할 수 있어요.'
-    : '이 장소의 링크를 추가해요 (카카오맵, 네이버 지도, 인스타 등)';
-  document.getElementById('modalLabel').value = isEditing ? (pill.dataset.label || '') : '';
-  document.getElementById('modalUrl').value = isEditing ? (pill.dataset.url || '') : '';
-  del.style.display = isEditing ? 'inline-flex' : 'none';
-  document.getElementById('modalOverlay').classList.add('open');
-  setTimeout(() => document.getElementById('modalLabel').focus(), 100);
+  /* car */
+  const car=document.createElementNS(ns,'circle');car.setAttribute('r','10');car.setAttribute('fill',st.route);car.setAttribute('stroke','white');car.setAttribute('stroke-width','2.5');car.setAttribute('cx',fx);car.setAttribute('cy',fy);car.setAttribute('filter','url(#sh)');svg.appendChild(car);
+  const carTxt=document.createElementNS(ns,'text');carTxt.setAttribute('x',fx);carTxt.setAttribute('y',fy+4.5);carTxt.setAttribute('text-anchor','middle');carTxt.setAttribute('font-size','11');carTxt.textContent=modeEmoji[mode]||'🚗';svg.appendChild(carTxt);
+
+  svg._rl=rl; svg._car=car; svg._carTxt=carTxt; svg._pathD=pathD; svg._fx=fx; svg._fy=fy;
 }
 
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('open');
-  currentPill = null;
+function drawPin(svg,x,y,color,label,isFrom,ns){
+  const c=document.createElementNS(ns,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r','7');c.setAttribute('fill',color);c.setAttribute('stroke','white');c.setAttribute('stroke-width','2');svg.appendChild(c);
+  const bx=isFrom?x+10:x-10, anchor=isFrom?'start':'end', ly=y-13;
+  const rw=label.length*7+10;
+  const rect=document.createElementNS(ns,'rect');
+  rect.setAttribute('x',isFrom?bx-2:bx-rw+2);rect.setAttribute('y',ly-11);rect.setAttribute('width',rw);rect.setAttribute('height','14');rect.setAttribute('fill',color);rect.setAttribute('rx','5');svg.appendChild(rect);
+  const t=document.createElementNS(ns,'text');t.setAttribute('x',isFrom?bx+1:bx-1);t.setAttribute('y',ly);t.setAttribute('text-anchor',anchor);t.setAttribute('font-size','9.5');t.setAttribute('fill','white');t.setAttribute('font-weight','bold');t.setAttribute('font-family','Gowun Dodum,sans-serif');t.textContent=label;svg.appendChild(t);
 }
 
-function saveLink() {
-  const label = document.getElementById('modalLabel').value.trim();
-  const url = document.getElementById('modalUrl').value.trim();
-  if(!label) { document.getElementById('modalLabel').focus(); return; }
-
-  if(isEditing && currentPill) {
-    currentPill.textContent = '🔗 ' + label;
-    currentPill.href = url || '#';
-    currentPill.dataset.label = label;
-    currentPill.dataset.url = url;
-    if(url) currentPill.target = '_blank';
-  } else if(currentPill) {
-    const a = document.createElement('a');
-    a.className = 'link-pill existing';
-    a.textContent = '🔗 ' + label;
-    a.href = url || '#';
-    if(url) a.target = '_blank';
-    a.dataset.label = label;
-    a.dataset.url = url;
-    a.addEventListener('dblclick', e => { e.preventDefault(); openModal(a); });
-    a.title = '더블클릭으로 수정';
-    currentPill.parentNode.insertBefore(a, currentPill);
+function animateCar(svg){
+  const pathEl=document.createElementNS('http://www.w3.org/2000/svg','path');
+  pathEl.setAttribute('d',svg._pathD);
+  const total=pathEl.getTotalLength();
+  const rl=svg._rl, car=svg._car, ct=svg._carTxt;
+  let start=null;
+  const dur=2200;
+  function step(ts){
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/dur,1);
+    const e=p<.5?2*p*p:-1+(4-2*p)*p;
+    const len=e*total;
+    rl.setAttribute('stroke-dasharray',`${len} ${total-len+1}`);
+    const pt=pathEl.getPointAtLength(len);
+    car.setAttribute('cx',pt.x);car.setAttribute('cy',pt.y);
+    ct.setAttribute('x',pt.x);ct.setAttribute('y',pt.y+4.5);
+    if(p<1)requestAnimationFrame(step);
   }
-  closeModal();
+  requestAnimationFrame(step);
 }
 
-function deleteLink() {
-  if(currentPill && isEditing) currentPill.remove();
-  closeModal();
+function toggleMap(btn){
+  const panel=btn.nextElementSibling;
+  const isOpen=panel.classList.contains('open');
+  if(isOpen){panel.classList.remove('open');btn.classList.remove('open');return;}
+  const svg=panel.querySelector('.route-svg');
+  if(!svg._drawn){drawMap(btn,svg);svg._drawn=true;}
+  panel.classList.add('open');btn.classList.add('open');
+  setTimeout(()=>animateCar(svg),200);
 }
 
-document.getElementById('modalOverlay').addEventListener('click', function(e) {
-  if(e.target === this) closeModal();
-});
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+/* ══════ MODAL ══════ */
+let currentPill=null,isEditing=false;
+function openModal(pill){
+  currentPill=pill; isEditing=pill.classList.contains('existing');
+  document.getElementById('modalTitle').textContent=isEditing?'링크 수정':'링크 추가';
+  document.getElementById('modalSub').textContent=isEditing?'링크를 수정하거나 삭제할 수 있어요.':'이 장소의 링크를 추가해요';
+  document.getElementById('modalLabel').value=isEditing?(pill.dataset.label||''):'';
+  document.getElementById('modalUrl').value=isEditing?(pill.dataset.url||''):'';
+  document.getElementById('btnDelete').style.display=isEditing?'inline-flex':'none';
+  document.getElementById('modalOverlay').classList.add('open');
+  setTimeout(()=>document.getElementById('modalLabel').focus(),100);
+}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');currentPill=null;}
+function saveLink(){
+  const label=document.getElementById('modalLabel').value.trim();
+  const url=document.getElementById('modalUrl').value.trim();
+  if(!label){document.getElementById('modalLabel').focus();return;}
+  if(isEditing&&currentPill){currentPill.textContent='🔗 '+label;currentPill.href=url||'#';if(url)currentPill.target='_blank';currentPill.dataset.label=label;currentPill.dataset.url=url;}
+  else if(currentPill){const a=document.createElement('a');a.className='link-pill existing';a.textContent='🔗 '+label;a.href=url||'#';if(url)a.target='_blank';a.dataset.label=label;a.dataset.url=url;a.title='더블클릭으로 수정';a.addEventListener('dblclick',e=>{e.preventDefault();openModal(a);});currentPill.parentNode.insertBefore(a,currentPill);}
+  closeModal();
+}
+function deleteLink(){if(currentPill&&isEditing)currentPill.remove();closeModal();}
+document.getElementById('modalOverlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 </script>
 </body>
 </html>
+
